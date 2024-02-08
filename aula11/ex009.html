@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            border-radius: 50px;
+        }
+        input#txtpais{
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vive onde?</h1>
+    Você está residindo em qual país? <input type="text" id="txtpais">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+        let pais = window.document.getElementById('txtpais').value.toLowerCase()
+        let res = window.document.getElementById('res')
+        if (pais === 'brasil') {
+            res.innerHTML = `<p>Você é <strong>Brasileiro!</strong></p>`
+            res.style.color = 'green'
+        } else {
+            res.innerHTML = `<p>Você é <strong>Estrangeiro!</strong></P>`
+            res.style.color = 'blue'    
+        }
+        }
+        
+    </script>
+</body>
+</html>
